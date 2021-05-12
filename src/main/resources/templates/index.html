@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html  lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<form action="/FileUpLoad"  enctype="multipart/form-data" method="post">
+						<fieldset>
+							 <legend>表单项</legend> 
+							 <label>上传文件</label>
+							 <input type="file" name="file" />
+							 <label>文件名</label>
+							 <input type="text" name="fileNames" />
+							<br />
+							<span class="help-block"><button type="submit" class="btn">提交</button><span style="color: red;" th:text="${tips}"></span></span>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>
